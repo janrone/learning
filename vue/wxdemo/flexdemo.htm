@@ -49,6 +49,12 @@
             display: flex;
         }
 
+        .container .top{
+            height: 1.1rem;
+            background-color: #ffffff;
+            display: flex;
+        }
+
         .container .left {
             display: flex;
             align-items: center;
@@ -76,10 +82,14 @@
             font-family: pfr;
         }
 
-
         #line {
             height: 0.01rem;
             background-color: #eeeeee;
+        }
+
+        #gap {
+            height: 0.32rem;
+            background-color: #fafafa;
         }
 
         .point {
@@ -94,17 +104,48 @@
 <div class="header">
     <span id="title">发现</span>
 </div>
+
 <div id="line"></div>
-<div class="container">
-    <div class="left">
-        <img style="width: 0.48rem; height: 0.48rem" src="./assets/image/img_xbtj.png">
-    </div>
-    <div class="main">
-        <label class="text_name">续班统计</label>
-    </div>
-    <div class="right">
-        <div class="point"></div>
-        <img style="width: 0.48rem; height: 0.48rem" src="./assets/image/img_arrow.png">
-    </div>
+<div id="app">
+
+
+
+<div v-for="item in msg_list">
+    <div class="container" >
+     <div class="left">
+            <img style="width: 0.48rem; height: 0.48rem" v-bind:src="item.src">
+        </div>
+        <div class="main">
+            <label class="text_name"> {{item.name}}</label>
+        </div>
+        <div class="right">
+            <div class="point" v-if="item.num > 0"></div>
+            <img style="width: 0.48rem; height: 0.48rem" src="./assets/image/img_arrow.png">
+        </div> 
+    </div>  
+    <div id="line" style="margin-left:1.12rem"></div>
+    <div id="gap"></div>
 </div>
-<div id="line" style="margin-left:1.12rem"></div>
+
+</div>
+
+
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded',function () {
+        var vm = new Vue({
+            el: '#app',
+            data:{
+                msg_list:[
+                    {'name': '续班统计', 'num': 18, 'src': './assets/image/img_xbtj.png'},
+                    {'name': '云盘', 'num': 0, 'src': './assets/image/img_yp.png'},
+                    {'name': '云盘', 'num': 0, 'src': './assets/image/img_yp.png'},
+                    {'name': '续班排行榜', 'num': 0, 'src': './assets/image/img_xbphb.png'},
+                    {'name': '异常考勤申诉', 'num': 0, 'src': './assets/image/img_yckq.png'},
+                    {'name': '泡泡双师', 'num': 0, 'src': './assets/image/img_ppsh.png'},
+                    {'name': '意见反馈', 'num': 25, 'src': './assets/image/img_yjfk.png'}
+                ]
+            }
+        });
+    },false);
+</script>
