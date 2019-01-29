@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Hello world</title>
+    <script type="text/javascript" src="autosize.js"></script>
+    <script type="text/javascript" src="vue.js"></script>
+    <style>
+        body {
+            margin: 0;
+            width: 100%;
+        }
+
+        @font-face {
+            font-family: 'pfm';
+            src: url('./assets/font/PingFangSC-Medium.ttf');
+        }
+
+        @font-face {
+            font-family: 'pfr';
+            src: url('./assets/font/PingFangSC-Regula.ttf');
+        }
+
+        #header {
+            height: 0.88rem;
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+        }
+
+        #title {
+            margin-left: 0.32rem;
+            font-size: 0.4rem;
+            font-weight: 500;
+            font-family: pfm;
+        }
+
+        #line {
+            height: 0.01rem;
+            background-color: #eeeeee;
+        }
+
+        .item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: 1.1rem;
+            font-size: 0.32rem;
+            font-family: pfr;
+        }
+
+        #main {
+            width: 100%;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .item {
+            margin-left: 0.32rem;
+        }
+
+        .text_name {
+            margin-left: 0.32rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <span id="title">发现</span>
+    </div>
+    <div id="line"></div>
+    <div id="main">
+        <div class="item"> <img src="./assets/image/img_xbtj.png"> <label class="text_name">续班统计</label></div>
+        <div class="item"> <img src="./assets/image/img_yp.png"> <label class="text_name">云盘</label></div>
+        <div class="item"> <img src="./assets/image/img_rw.png"> <label class="text_name">任务</label></div>
+    </div>
+
+
+</body>
+
+</html>

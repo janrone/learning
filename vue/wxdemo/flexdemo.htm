@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello world</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="autosize.js"></script>
+    <script type="text/javascript" src="vue.js"></script>
+
+    <style>
+        @font-face {
+            font-family: 'pfm';
+            src: url('./assets/font/PingFangSC-Medium.ttf');
+        }
+
+        @font-face {
+            font-family: 'pfr';
+            src: url('./assets/font/PingFangSC-Regula.ttf');
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            height: 0.88rem;
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+        }
+
+        #title {
+            margin-left: 0.32rem;
+            font-size: 0.4rem;
+            font-weight: 500;
+            font-family: pfm;
+        }
+
+        .container {
+            height: 1.1rem;
+            background-color: #ffffff;
+            display: flex;
+        }
+
+        .container .left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 1.12rem;
+        }
+
+        .container .right {
+            display: flex;
+            align-items: center;
+            flex: 0 0 200px;
+            padding-right: 0.16rem;
+            justify-content: flex-end;
+        }
+
+        .container .main {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            flex: auto;
+        }
+
+        .text_name {
+            font-size: 0.32rem;
+            font-family: pfr;
+        }
+
+
+        #line {
+            height: 0.01rem;
+            background-color: #eeeeee;
+        }
+
+        .point {
+            width: 0.16rem;
+            height: 0.16rem;
+            background: red;
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+<div class="header">
+    <span id="title">发现</span>
+</div>
+<div id="line"></div>
+<div class="container">
+    <div class="left">
+        <img style="width: 0.48rem; height: 0.48rem" src="./assets/image/img_xbtj.png">
+    </div>
+    <div class="main">
+        <label class="text_name">续班统计</label>
+    </div>
+    <div class="right">
+        <div class="point"></div>
+        <img style="width: 0.48rem; height: 0.48rem" src="./assets/image/img_arrow.png">
+    </div>
+</div>
+<div id="line" style="margin-left:1.12rem"></div>

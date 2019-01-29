@@ -1,0 +1,178 @@
+<!DOCTYPE html> 
+<html>
+ <head>
+  <title>Hello world</title>
+  <script type="text/javascript" src="autosize.js"></script>
+  <script type="text/javascript" src="vue.js"></script>
+  <style>
+      .bodyStyle{
+          margin: 0px;
+      }
+   #titleDiv{
+     height: 0.88rem;
+     background-color: #ffffff;
+   }
+   #backImg{
+    margin-left: 0.38rem;
+    width: 0.48rem;
+    height: 0.48rem;
+    margin-top: 0.2rem;
+    float:left;
+   }
+   #title{
+       font-size: 0.36rem;
+       float:left;
+       margin-left:2.54rem;
+       height:0.88rem;
+       line-height: 0.88rem;
+   }
+   .split{
+       height: 0.02rem;
+       background-color: #eeeeee;
+   }
+   #afterclass{
+       height: 1.9rem;
+   }
+   .leftImg{
+       height: 0.9rem;
+       width: 0.9rem;
+       margin-left: 0.4rem;
+       margin-top: 0.29rem;
+       margin-right: 0.2rem;
+       float: left;
+   }
+   .rightDiv{
+       margin-top: 0.33rem;
+       float: left;
+       vertical-align: top;
+   }
+   .rightTitle{
+       font-size: 0.32rem;
+       color: #333333;
+   }
+   .rightBottom{
+       font-size: 0.24rem;
+       margin-top: 0.06rem;
+       color: #999999;
+       width: 4.5rem;
+       text-overflow: ellipsis;
+       overflow: hidden;
+       white-space: nowrap;
+   }
+   .itemTitle{
+       font-size: 0.28rem;
+       color:#666666;
+       margin-left: 0.4rem;
+       float: left;
+   }
+   #all-read{
+       color:#0AC3B9;
+       font-size: 0.24rem;
+       float: right;
+       margin-right: 0.4rem;
+   }
+   .listItem{
+       height: 1.5rem;
+       clear: both;
+   }
+   .rightItem{
+       font-size: 0.22rem;
+       color: #BBBBBB;
+       float: right;
+       margin-top: 0.46rem;
+       margin-right: 0.4rem;
+   }
+   .splitItem{
+       height: 0.02rem;
+       background-color: #eeeeee;
+       margin-left: 1.5rem;
+       margin-right: 0.3rem;
+   }
+   .red-point{
+       width: 0.16rem;
+       height: 0.16rem;
+       border-radius:0.08rem;
+       -moz-border-radius:0.08rem; /* Old Firefox */
+       background-color: #FF554B;
+       margin-top: 0.2rem;
+       margin-left: 0rem;
+       float: right;
+   }
+   .red-corner,.blue-corner{
+       border-radius:0.15rem;
+       -moz-border-radius:0.15rem; /* Old Firefox */
+       margin-top: 0.1rem;
+       margin-left: 0rem;
+       float: right;
+       font-size: 0.24rem;
+       color: #FFFFFF;
+       padding-left: 0.08rem;
+       padding-right: 0.08rem;
+   }
+   .red-corner{
+       background-color: #FF554B;
+   }
+   .blue-corner{
+       background-color: #B4DCF4;
+   }
+  </style>
+ </head>
+
+  <body class="bodyStyle">
+    <div id="titleDiv" >
+        <img id="backImg" src="img/ic_back.png"><span id="title">通知</span>
+    </div>
+    <div class="split"></div>
+    <div id="afterclass">
+        <img class="leftImg" src="img/ic_left_1.png">
+        <div class="rightDiv">
+            <div class="rightTitle">课后服务</div>
+            <div class="rightBottom">您收到5条练习消息，点击查看</div>
+        </div>
+    </div>
+
+    <span class="itemTitle">通知列表</span>
+    <span id="all-read">全部已读</span>
+    <div class="listItem">
+        <img class="leftImg" src="img/ic_left_2.png">
+        <div class="rightDiv">
+            <div class="rightTitle">支付信息</div>
+            <div class="rightBottom">您有一条新的支付消息，点击查看</div>
+        </div>
+        <div class="rightItem">
+            20:21<br>
+
+            <div class="blue-corner">99+</div>
+        </div>
+    </div>
+    <div class="splitItem"></div>
+
+    <div class="listItem">
+        <img class="leftImg" src="img/ic_left_3.png">
+        <div class="rightDiv">
+            <div class="rightTitle">活动通知</div>
+            <div class="rightBottom">限时特惠，购课立减50元，快来抢购吧！</div>
+        </div>
+        <div class="rightItem">
+            昨天 20:21<br>
+
+            <div class="red-corner">39</div>
+        </div>
+    </div>
+    <div class="splitItem"></div>
+
+    <div class="listItem">
+        <img class="leftImg" src="img/ic_left_4.png">
+        <div class="rightDiv">
+            <div class="rightTitle">系统通知</div>
+            <div class="rightBottom">[V5.0] 新版本更新啦，全新界面换肤，快来…</div>
+        </div>
+        <div class="rightItem">
+            昨天 15:00<br>
+
+            <div class="red-point"></div>
+        </div>
+    </div>
+    <div class="splitItem"></div>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+﻿一、两种方式
+1，npm install vue 
+2，cnd
+  注：修改 npm源 https://npm.taobao.org/
+        1.得到原本的镜像地址
+        npm get registry 
+
+        > https://registry.npmjs.org/
+
+        淘宝的
+
+nrm安装及npm registry设置
+// use npm
+npm i nrm -g
+// use yarn
+yarn global add nrm
+查看可用的npm源
+
+nrm ls
+
+// 用法： nrm use ***
+nrm use taobao
+// 切换之后可用 nrm ls查看是否已经切换了npm源
+
+
+
+        npm config set registry http://registry.npm.taobao.org/
+
+        yarn config set registry http://registry.npm.taobao.org/
+
+        2.换成原来的
+
+        npm config set registry https://registry.npmjs.org/
+
+nvm Node版本管理工具
+Node版本管理器--nvm，可以运行在多种操作系统上。nvm for windows 是使用go语言编写的软件。 
+我电脑使用的是Windows操作系统，所以我要记录下在此操作系统上nvm的安装和使用。
+
+https://www.cnblogs.com/weiqinl/p/7503123.html
+
+
+命令行工具 (CLI)
+npm install --global vue-cli    
+
+Vue CLI 3
+npm install -g @vue/cli
+
+# 创建一个基于 webpack 模板的新项目
+$ vue init webpack my-project
+# 这里需要进行一些配置，默认回车即可
+
+$ vue run dev 
+#如果运行不起来 需要 npm install一下
+
+npm run dev
+
+    > vuedemo1@1.0.0 dev E:\learning\vue\vuedemo1
+    > webpack-dev-server --inline --progress --config build/webpack.dev.conf.js
+
+    95% emitting
+
+    DONE  Compiled successfully in 6398ms                                                                 17:05:06
+    I  Your application is running here: http://localhost:8080
+
+
+npm run build打包
+
+2、打包后的文件在dist目录里面
+index.html
+打开/config/index.js文件，找到build {}的配置下有一个
+assetsPublicPath: '/'的参数配置，修改成assetsPublicPath: './'就好啦，
+执行npm run build后资源文件的路径就修改成./了。
+
+https://www.jianshu.com/p/6e8d88ddb0b7
+
+项目实战：
+https://www.jianshu.com/p/dc5057e7ad0d
+
+
+css 
+d 选择器
+id 选择器可以为标有特定 id 的 HTML 元素指定特定的样式。
+
+id 选择器以 "#" 来定义。
+
+下面的两个 id 选择器，第一个可以定义元素的颜色为红色，第二个定义元素的颜色为绿色：
+
+#red {color:red;}
+#green {color:green;}
+下面的 HTML 代码中，id 属性为 red 的 p 元素显示为红色，而 id 属性为 green 的 p 元素显示为绿色。
+
+<p id="red">这个段落是红色。</p>
+<p id="green">这个段落是绿色。</p>
+注意：id 属性只能在每个 HTML 文档中出现一次。想知道原因吗，请参阅 XHTML:网站重构。
+
+id 选择器和派生选择器
+在现代布局中，id 选择器常常用于建立派生选择器。
+
+#sidebar p {
+	font-style: italic;
+	text-align: right;
+	margin-top: 0.5em;
+	}
+
+在 CSS 中，类选择器以一个点号显示：
+
+.center {text-align: center}
+
+rem和px转换
+https://blog.csdn.net/alleged/article/details/79031857
+
+字体
+https://www.cnblogs.com/shouhe/p/9240300.html
+
+我想你应该是不太熟悉css中的相对路径和绝对路径：
+"." 代表当前所在目录，相对路径。如:<a href="./abc">文本</a>或<img src="./abc" />；
+".." 代表上一层目录，相对路径。如:<a href="../abc">文本</a>或<img src="../abc"/>；
+"../../" 代表的是上一层目录的上一层目录，相对路径。 如:<img src="../../abc" />；
+"/" 代表根目录,绝对路径。 如：<a href="/abc">文本</a>或<img src="/abc"/>；
+"D:/abc/" 代表根目录,绝对路径。
+在使用相对路径时，我们用符号“.”来表示当前目录；用符号“..”来表示当前目录的父目录。
+
+布局
+http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+
+
+python -m http.server 80

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello world</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="autosize.js"></script>
+    <script type="text/javascript" src="vue.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        @font-face {
+            font-family: 'pfm';
+            src: url('./assets/font/PingFangSC-Medium.ttf');
+        }
+
+        @font-face {
+            font-family: 'pfr';
+            src: url('./assets/font/PingFangSC-Regula.ttf');
+        }
+
+        #header {
+            height: 0.88rem;
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+        }
+
+        #title {
+            margin-left: 0.32rem;
+            font-size: 0.4rem;
+            font-weight: 500;
+            font-family: pfm;
+        }
+
+        #line {
+            height: 0.01rem;
+            background-color: #eeeeee;
+        }
+
+        .item {
+            margin-left: 0.32rem;
+            display: flex;
+            align-items: center;
+            height: 1.1rem;
+            font-size: 0.32rem;
+            font-family: pfr;
+        }
+
+        #main {
+            width: 100%;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .text_name {
+            margin-left: 0.32rem;
+        }
+
+        .gray_gap {
+            height: 0.32rem;
+            background: rgba(250, 250, 250, 1);
+        }
+
+        .alignright {
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        .container{
+        flex: auto;
+        background-color: #145d9c;
+        display: flex;
+    }
+    .container .left,.container .right{
+        flex: 0 0 200px;
+        background-color: #3a90ce;
+    }
+    </style>
+</head>
+
+<body>
+        <div class="container">
+                <div class="left"></div>
+                <div class="main"></div>
+                <div class="right"></div>
+            </div>
+    <div id="header">
+        <span id="title">发现</span>
+    </div>
+    <div id="line"></div>
+    <div id="main">
+        <div class="item">
+            <img style="width: 0.48rem; height: 0.48rem" src="./assets/image/img_xbtj.png">
+            <label class="text_name">续班统计</label>
+            <div class="alignright">
+                    <img style="width: 0.48rem; height: 0.48rem"   src="./assets/image/img_arrow.png">
+                    <img style="width: 0.48rem; height: 0.48rem"   src="./assets/image/img_arrow.png">
+            </div>
+        </div>
+        <div id="line" style="margin-left:1.12rem"></div>
+
+        <div class="item"> <img style="width: 0.48rem; height: 0.48rem" src="./assets/image/img_yp.png"> <label class="text_name">云盘</label></div>
+        <div id="line" style="margin-left:1.12rem"></div>
+        <div class="item"><img style="width: 0.48rem; height: 0.48rem" src="./assets/image/img_rw.png"> <label class="text_name">任务</label></div>
+        <div class="gray_gap"></div>
+    </div>
+    
+
+</body>
+
+</html>

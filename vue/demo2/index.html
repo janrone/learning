@@ -1,0 +1,124 @@
+/* html代码，view层，模板 */
+   <div id="app">
+        <h3>ex:1</h3>
+    {{message}}
+    </div>
+/* 引入相关文件，然创建实例，在实例中写各种方法就ok了 */
+
+    <div id="app1">
+            <h3>ex:2</h3>
+        <input type="text" placeholder="请输入" v-model="message"/> 
+        <br/>
+        <p>数据：{{message}}</p>
+    </div>
+<div id="app2">
+        <h3>ex:3</h3>
+        //原生的html：双大括号输出的文本，不会解析html标签//
+        <p>{{ value }}<p>   
+        页面展示  =>  <span>我是一个span标签</span> 
+        <p v-html="value"><p> 
+
+        需要注意的是，有时候因为一些网络延迟等原因，用户会在也买年中先看到{{ xxx }}，
+        然后才有数据。我们若想避免此效果，可用v-text="xxxx"代替
+</div>
+<div id="box">
+    <h3>ex:4</h3>
+
+</div>
+        
+<div id="box1">
+    <h3>ex:5</h3>
+
+</div>
+
+<template id="item">
+    <p>我是template</p>
+</template>
+
+<div id="box2">
+
+</div>
+
+<div id="box3">
+
+</div>
+
+循环列表数据：
+
+<div id="list">
+
+    <ul>
+        <li v-for="(val,key) in fruitsArr">{{ val }} => {{ key }}</li>  //循环出来的列表项
+    </ul>
+</div>    
+
+
+<script src="vue.js"></script>
+<script type="x-template" id="strscript">
+    <p>我是一个p标签 模板 script</p>
+</script>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded',function () {
+        var str = '<h2>hello pink! 我是模板字符串</h2>'
+        var vm4 = new Vue({
+            el: '#box',
+            template: str
+        });
+
+        var vm5 = new Vue({
+            el: '#box1',
+            template: '#strscript'
+        });
+
+        var vm6 = new Vue({
+            el: '#box2',
+            template: '#item'
+        });
+
+        var vm6 = new Vue({
+            el: '#box3',
+            
+        });
+
+        var vm6 = new Vue({
+            el: '#list',
+            data: {
+                fruitsArr:['apple','banana','pear','orange']
+            }
+        });
+
+    },false);
+
+    let data = {
+            message: 'hello,Vue, My first App'
+        } 
+
+    //vm实例
+    var vm = new Vue({
+        el: '#app',  //挂载元素
+        data: data
+    });
+    var vm1 = new Vue({
+        el: '#app1',
+        data: {
+            message: 'hello, Datura!'
+        },
+        methods: {
+            test (){
+                alert(1);
+            }
+        },
+        compontents:{
+        //这里存放组件
+        }
+    });
+    console.log(vm1.$data);
+
+    var vm2 = new Vue({
+        el: '#app2',
+        data:{
+            value: '<span>我是一个span标签</span>'
+        }
+});
+</script>
