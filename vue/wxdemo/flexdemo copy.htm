@@ -7,7 +7,6 @@
     <script type="text/javascript" src="js/autosize.js"></script>
     <script type="text/javascript" src="js/vue.js"></script>
     <script type="text/javascript" src="js/vue-resource.js"></script>
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 
     <style>
         @font-face {
@@ -128,13 +127,10 @@
         <div id="gap" v-if="item.group"></div>
         <div id="line" v-else style="margin-left:1.12rem"></div>
     </div>
+
 </div>
 
 <script type="text/javascript">
-
-window.onload = function(){
-    loadphp();
-}
     document.addEventListener('DOMContentLoaded', function () {
         var vm = new Vue({
             el: '#app',
@@ -186,11 +182,10 @@ window.onload = function(){
             },
             methods: {
                 getList: function () {
-                    //http://www.palmmicro.com/woody/res/sz162411cn.php
-                    this.$http.jsonp('http://www.palmmicro.com/woody/res/sz162411cn.php', { credentials: true })
+                    this.$http.jsonp('http://www.mocky.io/v2/5c500bc43300005b2cc5865a', { credentials: true })
                     // this.$http.get('http://www.mocky.io/v2/5c5009a63300005b2cc58652')
                         .then((res) => {
-                            //this.lists = res.data
+                            this.lists = res.data
                             console.log(res.data)
                         }, (err) => {
                             console.log(err)
@@ -201,12 +196,4 @@ window.onload = function(){
 
         vm.getList();
     }, false);
-
-    function loadphp(){
-        load('http://www.palmmicro.com/woody/res/sz162411cn.php');
-        // $.get("http://www.palmmicro.com/woody/res/sz162411cn.php",function(data,status){
-        //        console.log('data' + data); 
-        // });
-    }
-    
 </script>
