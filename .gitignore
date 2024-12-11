@@ -81,3 +81,7 @@ Pods
 !Podfile.lock
 
 dist
+
+
+# dependencies
+/node_modules

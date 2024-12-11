@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">KotlinComposeDemo</string>
+    <string name="title_activity_text_demo">TextDemoActivity</string>
+</resources>
