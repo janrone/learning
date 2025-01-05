@@ -1,3 +1,5 @@
+import org.gradle.internal.impldep.com.google.gson.internal.bind.TypeAdapters.URI
+
 pluginManagement {
     repositories {
         google {
@@ -16,6 +18,12 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+
+        maven {
+            name = "TarsosDSP repository"
+            url = uri("https://mvn.0110.be/releases")
+        }
+
     }
 }
 
