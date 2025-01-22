@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -44,6 +45,7 @@ class MainActivity : ComponentActivity() {
                         .fillMaxWidth()
                         .height(200.dp)
                         .padding(innerPadding))
+
 
                     GridViewDemo(modifier = Modifier.padding(innerPadding))
                 }
@@ -174,6 +176,8 @@ fun GridViewDemo(modifier: Modifier = Modifier) {
         )
     }
     Column {
+
+        Spacer(modifier = Modifier.height(160.dp))
         Button(modifier = Modifier.fillMaxWidth(), onClick = { listData.add("山竹" to R.mipmap.ic_like_selected) }) {
             Text(text = "新增数据")
         }
