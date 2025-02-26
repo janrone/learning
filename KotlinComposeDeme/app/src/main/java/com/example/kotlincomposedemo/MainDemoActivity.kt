@@ -6,7 +6,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.kotlincomposedemo.databinding.ActivityDemoMainXmlBinding
 import com.example.kotlincomposedemo.databinding.ActivityMainDemoBinding
 
 class MainDemoActivity : AppCompatActivity() {
@@ -26,7 +25,11 @@ class MainDemoActivity : AppCompatActivity() {
 
         binding.tvOne.setOnClickListener {
             Toast.makeText( this,"Click binding.tvOne", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, MainActivity::class.java))
+            val bundle = Bundle()
+            bundle.putBoolean("withAnim", true) // 向 bundle 中添加数据
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtras(bundle)
+            startActivity(intent)
             // 设置进入和退出动画
             overridePendingTransition(R.anim.slide_in_up, R.anim.no_animation);
 
