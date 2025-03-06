@@ -10,6 +10,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -44,18 +45,25 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            KotlinComposeDemoTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ShadowLayoutInCompose(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(200.dp)
-                            .padding(innerPadding)
-                    )
+            Column(modifier = Modifier.background(color = Color.White).padding(top = 50.dp).padding(16.dp)){
+                ShadowLayoutInCompose(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(200.dp)
+                        .padding(8.dp)
+                )
 
-
-                    GridViewDemo(modifier = Modifier.padding(innerPadding))
+                Row {
+                    TextWithBorder(text = "表头：")
+                    TextWithBorder(text = "内容")
                 }
+
+                Row {
+                    TextWithBorder(text = "表头：")
+                    TextWithBorder(text = "内容")
+                }
+
+                GridViewDemo(modifier = Modifier.padding(8.dp))
             }
         }
     }
@@ -206,6 +214,7 @@ fun GridViewDemo(modifier: Modifier = Modifier) {
     Column {
 
         Spacer(modifier = Modifier.height(160.dp))
+
         Button(
             modifier = Modifier.fillMaxWidth(),
             onClick = { listData.add("山竹" to R.mipmap.ic_like_selected) }) {
@@ -244,7 +253,7 @@ fun String.toColor() = Color(android.graphics.Color.parseColor(this))
 fun TextWithBorder(
     type: Int = 0,
     text: String,
-    color: Color = "#24252A".toColor(),
+    color: Color = Color.Black,
     topBorderWidth: Dp = 1.dp,
     bottomBorderWidth: Dp = 1.dp,
     startBorderWidth: Dp = 1.dp,
@@ -259,7 +268,7 @@ fun TextWithBorder(
 
                 // 绘制顶部边框
                 drawLine(
-                    color = "#24252A".toColor(),
+                    color =color,
                     start = Offset(0f, 0f),
                     end = Offset(textSize.width, 0f),
                     strokeWidth = topBorderWidth.toPx()
@@ -267,21 +276,21 @@ fun TextWithBorder(
 
                 // 绘制底部边框
                 drawLine(
-                    color = "#24252A".toColor(),
+                    color = color,
                     start = Offset(0f, textSize.height),
                     end = Offset(textSize.width, textSize.height),
                     strokeWidth = bottomBorderWidth.toPx()
                 )
 
                 drawLine(
-                    color = "#24252A".toColor(),
+                    color = color,
                     start = Offset(0f, 0f),
                     end = Offset(0f, textSize.height),
                     strokeWidth = startBorderWidth.toPx()
                 )
 
                 drawLine(
-                    color = "#24252A".toColor(),
+                    color =color,
                     start = Offset(textSize.width, 0f),
                     end = Offset(textSize.width, textSize.height),
                     strokeWidth = endBorderWidth.toPx()
